@@ -1,0 +1,66 @@
+import { useState } from 'react';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { Pagination } from '@quimera-ui/react';
+
+<Meta
+  title="Components/Pagination"
+  component={Pagination}
+  args={{}}
+  argTypes={{}}
+  parameters={{}}
+/>
+
+export const Template = ({ ...args }) => <Pagination {...args} />;
+
+export const TemplateBasic = () => {
+  const [page, setPage] = useState(1);
+  return (
+    <Pagination
+      totalCountOfRegisters="10"
+      currentPage={page}
+      onPageChange={setPage}
+    />
+  );
+};
+
+# Pagination
+
+O componente `Pagination` permite ao usuário selecionar uma página específica a partir de um intervalo de páginas.
+
+## Import
+
+```sh
+  import { Pagination } from '@paylivre/components';
+```
+
+## Basic
+
+<Canvas>
+  <Story name="Basic">{TemplateBasic.bind({})}</Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{
+      isDisabled: true,
+      totalCountOfRegisters: 10,
+      currentPage: 5,
+      text: 'of',
+    }}
+    argTypes={{
+      totalCountOfRegisters: { control: { disable: true } },
+      currentPage: { control: { disable: true } },
+      registersPerPage: { control: { disable: true } },
+    }}
+    parameters={{}}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Pagination} />

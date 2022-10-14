@@ -1,0 +1,130 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+
+import { Heading, Flex } from '@quimera-ui/react';
+
+<Meta
+  title="TYPOGRAPHY/Heading"
+  component={Heading}
+  args={{
+    children: 'Heading',
+    as: 'h1',
+    color: 'black',
+    uppercase: false,
+    bold: false,
+  }}
+  argTypes={{
+    size: {
+      options: [
+        ' ',
+        'xxs',
+        'xs',
+        'sm',
+        'base',
+        'lg',
+        'xl',
+        '2xl',
+        '3xl',
+        '4xl',
+        '5xl',
+        '6xl',
+        '7xl',
+        '8xl',
+        '9xl',
+      ],
+    },
+  }}
+  parameters={{
+    docs: {
+      source: {
+        language: 'jsx',
+        type: 'auto',
+        state: 'open',
+      },
+    },
+  }}
+/>
+
+export const Template = ({ ...args }) => <Heading {...args} />;
+
+# Heading
+
+O componente `Heading` é usado para renderizar elementos de cabeçalho HTML semânticos.
+
+## Import
+
+```sh
+  import { Heading } from '@paylivre/components';
+```
+
+## Basic
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      children: 'Heading',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Variations Theme
+
+O `Heading` renderiza uma tag `<h1>` por padrão, mas pode receber qualquer outra tag de cabeçallho através da props `as`.
+
+<Canvas>
+  <Story name="as">
+    <Heading as="h1">Olá, sou um h1</Heading>
+    <Heading as="h2">Olá, sou um h2</Heading>
+    <Heading as="h3">Olá, sou um h3</Heading>
+    <Heading as="h4">Olá, sou um h4</Heading>
+    <Heading as="h5">Olá, sou um h5</Heading>
+    <Heading as="h6">Olá, sou um h6</Heading>
+  </Story>
+</Canvas>
+
+O `Heading` recebe variações de tamanhos passados na props `size`.
+
+<Canvas>
+  <Story name="sizes">
+    <Heading size="xs">Olá, Paylivre</Heading>
+    <Heading size="sm">Olá, Paylivre</Heading>
+    <Heading size="base">Olá, Paylivre</Heading>
+    <Heading size="lg">Olá, Paylivre</Heading>
+    <Heading size="xl">Olá, Paylivre</Heading>
+    <Heading size="2xl">Olá, Paylivre</Heading>
+    <Heading size="3xl">Olá, Paylivre</Heading>
+    <Heading size="4xl">Olá, Paylivre</Heading>
+    <Heading size="5xl">Olá, Paylivre</Heading>
+    <Heading size="6xl">Olá, Paylivre</Heading>
+    <Heading size="7xl">Olá, Paylivre</Heading>
+    <Heading size="8xl">Olá, Paylivre</Heading>
+    <Heading size="9xl">Olá, Paylivre</Heading>
+  </Story>
+</Canvas>
+
+O `Heading` recebe variações de cores pela props `color`.
+
+<Canvas>
+  <Story name="colors">
+    <Flex bg="gray">
+      <Heading bold uppercase color="white">
+        Olá, Paylivre
+      </Heading>
+    </Flex>
+    <Heading bold uppercase color="gray">
+      Olá, Paylivre
+    </Heading>
+    <Heading bold uppercase color="black">
+      Olá, Paylivre
+    </Heading>
+    <Heading bold uppercase color="primary">
+      Olá, Paylivre
+    </Heading>
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Heading} />
