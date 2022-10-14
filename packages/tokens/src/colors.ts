@@ -1,0 +1,30 @@
+export const colors = {
+  primary: '#215aff',
+  red_50: '#ff6060',
+  red_100: '#ff2e00',
+  yellow_10: '#fff8d6',
+  yellow_100: '#ffb800',
+  yellow_200: '#ff7a00',
+  green_80: '#48c88f',
+  black: '#000000',
+  white: '#ffffff',
+
+  gray_10: '#F4F4F7',
+  gray_20: '#ecedef',
+  gray_30: '#DFE1E4',
+  gray_40: '#D3D6DA',
+  gray_50: '#B1B8BE',
+  gray_60: '#929AA3',
+
+  gray_70: '#AEAEB2',
+  gray_80: '#636366',
+  gray_90: '#48484A',
+  gray_100: '#3A3A3C',
+  gray_110: '#2C2C2E',
+  gray_120: '#1C1C1E',
+  neutral_white: '#ffffff',
+  neutral_black: '#000000',
+
+  aside: '#F6F9FC',
+  content: '#ffffff',
+};

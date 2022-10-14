@@ -1,0 +1,4 @@
+{
+  "extends": "@quimera-ui/ts-config/react.json",
+  "include": ["src"]
+}
