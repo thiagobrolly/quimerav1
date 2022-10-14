@@ -1,6 +1,7 @@
 {
   "extends": "@quimera-ui/eslint-config",
   "rules": {
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "react/self-closing-comp": "off"
   }
 }

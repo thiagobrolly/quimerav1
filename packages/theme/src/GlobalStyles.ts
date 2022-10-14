@@ -9,21 +9,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    // a cada 1rem será considerado 10px
-    font-size: 62.5%; // 62.5 * 16 / 100 = 10px
+    font-size: 62.5%;
   }
-
-  /* @media (max-width: 768px) {
-    html {
-      font-size: 54.7%; // 54.7 * 16 / 10 = 87,5 --> 87,5 * 16 / 100 = 14px
-      // todas as medidas relativas a 16px passam a ter 14px
-    }
-  }
-  @media (max-width: 480px) {
-    html {
-      font-size: 47.5%;
-    }
-  } */
 
   body,
   input,
