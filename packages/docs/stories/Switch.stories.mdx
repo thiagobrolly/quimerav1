@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+
+import { Switch } from '@quimera-ui/react';
+
+<Meta
+  title="Inputs/Switch"
+  component={Switch}
+  args={{}}
+  argTypes={{}}
+  parameters={{}}
+/>
+
+export const Template = ({ ...args }) => <Switch {...args} />;
+
+# Switch
+
+O componente `Switch` é um controle que permite ao usuário alternar entre verificado e não verificado.
+
+## Import
+
+```sh
+  import { Switch } from '@paylivre/components';
+```
+
+## Basic
+
+<Canvas>
+  <Story name="Default" args={{}} argTypes={{}} parameters={{}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Switch} />
