@@ -1,0 +1,58 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+
+import { TextField } from '@quimera-ui/react';
+
+<Meta
+  title="Inputs/TextField"
+  component={TextField}
+  args={{
+    label: 'Email',
+    type: 'text',
+    variant: 'standard',
+    success: false,
+    error: '',
+  }}
+  argTypes={{
+    type: {
+      options: ['text', 'email', 'password', 'search', 'number', 'tel', 'date'],
+      control: { type: 'radio' },
+    },
+    handleClear: {
+      table: {
+        disable: true,
+      },
+      control: false,
+    },
+    iconRight: {
+      control: false,
+    },
+    iconLeft: {
+      control: false,
+    },
+  }}
+  parameters={{}}
+/>
+
+export const Template = ({ ...args }) => <TextField {...args} />;
+
+# TextField
+
+O componente `TextField` funciona como um input de tipo TextField.
+
+## Import
+
+```sh
+  import { TextField } from '@paylivre/components';
+```
+
+## Basic
+
+<Canvas>
+  <Story name="Default" args={{}} argTypes={{}} parameters={{}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={TextField} />

@@ -1,0 +1,103 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { PlusCircle } from 'phosphor-react';
+
+import { Tooltip } from '@quimera-ui/react';
+
+<Meta
+  title="Popover/Tooltip"
+  component={Tooltip}
+  args={{
+    trigger: 'Tooltip',
+    children: 'Content',
+    className: '',
+    tooltipSize: '',
+  }}
+  argTypes={{
+    trigger: { type: 'string' },
+    children: { type: 'string' },
+  }}
+  parameters={{}}
+/>
+
+export const Template = ({ ...args }) => (
+  <div
+    style={{
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}
+  >
+    <Tooltip {...args} />
+  </div>
+);
+
+# Tooltip
+
+O componente `Tooltip` é responsável por apresentar uma mensagem de texto ao usuário manter o mouse por cima
+
+## Import
+
+```sh
+  import { Tooltip } from '@paylivre/components';
+```
+
+## Basic
+
+O `Tooltip` espera receber um `trigger` com o texto da primeira camada e um `children` com o texto apresentado ao usuário manter o mouse sobre o componente.
+
+<Canvas>
+  <Story name="Default" args={{}} argTypes={{}} parameters={{}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Customized
+
+O `Tooltip` pode ser customizado para apresentar uma mensagem de texto ao usuário manter o mouse por cima de ícone.
+
+<Canvas>
+  <Story
+    name="Customized"
+    args={{
+      trigger: (
+        <span
+          style={{
+            width: 40,
+            height: 40,
+            borderRadius: '50%',
+            background: '#fff',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: 24,
+            boxShadow: '2px 2px 2px 1px rgba(0, 0, 0, 0.2)',
+          }}
+        >
+          <PlusCircle size={32} />
+        </span>
+      ),
+      children: (
+        <div
+          style={{
+            width: '300px',
+          }}
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam
+          fugit consequuntur nam iste, fuga perspiciatis vero praesentium
+          accusamus sunt, repudiandae voluptatum error tempore quasi quod sit,
+          ullam quibusdam ipsum!
+        </div>
+      ),
+    }}
+    argTypes={{}}
+    parameters={{}}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Tooltip} />

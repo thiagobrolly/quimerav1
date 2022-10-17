@@ -1,0 +1,59 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+
+import { Checkbox } from '@quimera-ui/react';
+
+<Meta
+  title="Inputs/Checkbox"
+  component={Checkbox}
+  args={{}}
+  argTypes={{}}
+  parameters={{}}
+/>
+
+export const Template = ({ ...args }) => <Checkbox {...args} />;
+
+# Checkbox
+
+O componente `Checkbox` funciona como um input de tipo checkbox.
+
+## Import
+
+```sh
+  import { Checkbox } from '@paylivre/components';
+```
+
+## Basic
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      label: 'Checkbox',
+      name: 'checkbox',
+      checked: true,
+    }}
+    argTypes={{}}
+    parameters={{}}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Example
+
+<Canvas>
+  <Story name="Example" args={{}} argTypes={{}} parameters={{}}>
+    <div
+      style={{
+        paddingBottom: '1rem',
+      }}
+    >
+      <Checkbox label="Adventure" labelFor="adventure" />
+    </div>
+    <Checkbox label="Strategy" labelFor="strategy" />
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Checkbox} />

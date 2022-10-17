@@ -1,0 +1,95 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+
+import { Flex } from '@quimera-ui/react';
+
+<Meta
+  title="Layout/Flex"
+  component={Flex}
+  args={{
+    children: 'Componente Flex',
+    w: '',
+    h: '',
+    maxW: '',
+    minW: '',
+    maxH: '',
+    minH: '',
+    m: '',
+    mt: '',
+    mb: '',
+    ml: '',
+    mr: '',
+    mx: '',
+    my: '',
+    p: '',
+    pt: '',
+    pb: '',
+    pl: '',
+    pr: '',
+    px: '',
+    py: '',
+    gap: '',
+    border: '',
+    borderRadiusTop: '',
+    borderRadiusBottom: '',
+    borderRadiusRight: '',
+    borderRadiusLeft: '',
+    grow: '',
+  }}
+  argTypes={{
+    as: { type: 'symbol' },
+    children: { type: 'string' },
+    bg: { control: 'color' },
+  }}
+  parameters={{}}
+/>
+
+export const Template = ({ ...args }) => <Flex {...args} />;
+
+# Flex
+
+`Flex` é um componente com display flex por padrão e vem com várias props de estilo úteis.
+Ele renderiza um elemento `div` por padrão, mas através da prop `as` pode ser renderizado qualquer elemento html.
+
+## Import
+
+```sh
+  import { Flex } from '@paylivre/components';
+```
+
+## Basic
+
+<Canvas>
+  <Story name="Default" args={{}} argTypes={{}} parameters={{}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Example
+
+<Canvas>
+  <Story name="Example">
+    <Flex
+      w="100%"
+      h="200px"
+      bg="#3f4970"
+      borderRadius="medium"
+      align="center"
+      justify="center"
+      gap="5rem"
+    >
+      <Flex w="100px" h="100px" bg="red" p="2rem">
+        Box 1
+      </Flex>
+      <Flex w="100px" h="100px" bg="green" p="2rem">
+        Box 2
+      </Flex>
+      <Flex w="100px" h="100px" bg="blue" p="2rem">
+        Box 3
+      </Flex>
+    </Flex>
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Flex} />

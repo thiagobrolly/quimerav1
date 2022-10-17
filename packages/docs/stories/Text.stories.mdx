@@ -1,0 +1,66 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+
+import { Text } from '@quimera-ui/react';
+
+<Meta
+  title="TYPOGRAPHY/Text"
+  component={Text}
+  args={{
+    children: 'Paragraph',
+    as: 'p',
+    color: 'black',
+    uppercase: false,
+    bold: false,
+    smSize: '',
+    lineHeight: '',
+  }}
+  argTypes={{
+    size: {
+      options: [
+        ' ',
+        'xxs',
+        'xs',
+        'sm',
+        'base',
+        'lg',
+        'xl',
+        '2xl',
+        '3xl',
+        '4xl',
+        '5xl',
+        '6xl',
+        '7xl',
+        '8xl',
+        '9xl',
+      ],
+    },
+    color: {
+      type: 'string',
+    },
+  }}
+  parameters={{}}
+/>
+
+export const Template = ({ ...args }) => <Text {...args} />;
+
+# Text
+
+O componente `Text` é ...
+
+## Import
+
+```sh
+  import { Text } from '@paylivre/components';
+```
+
+## Basic
+
+<Canvas>
+  <Story name="Default" args={{}} argTypes={{}} parameters={{}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Text} />

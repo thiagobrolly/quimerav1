@@ -1,0 +1,123 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+import { Rocket, RocketLaunch, Alien } from 'phosphor-react';
+
+import { Button } from '@quimera-ui/react';
+
+<Meta
+  title="Components/Button"
+  component={Button}
+  args={{
+    children: 'Click Me',
+    variant: 'filled',
+    size: 'medium',
+    fullSize: false,
+    disabled: false,
+    isLoading: false,
+    maintainDimentions: false,
+  }}
+  argTypes={{
+    variant: {
+      options: ['standard', 'filled', 'outline', 'approve', 'danger'],
+      control: { type: 'radio' },
+    },
+    size: {
+      options: ['small', 'medium', 'large'],
+      control: { type: 'radio' },
+    },
+    leftIcon: {
+      options: ['noIcon', 'Rocket', 'RocketLaunch', 'Alien'],
+      control: 'select',
+      mapping: {
+        noIcon: null,
+        Rocket: <Rocket size={32} weight="fill" />,
+        RocketLaunch: <RocketLaunch size={32} weight="fill" />,
+        Alien: <Alien size={32} weight="fill" />,
+      },
+    },
+    rightIcon: {
+      options: ['noIcon', 'Rocket', 'RocketLaunch', 'Alien'],
+      control: 'select',
+      mapping: {
+        noIcon: null,
+        Rocket: <Rocket size={32} weight="fill" />,
+        RocketLaunch: <RocketLaunch size={32} weight="fill" />,
+        Alien: <Alien size={32} weight="fill" />,
+      },
+    },
+  }}
+/>
+
+export const Template = ({ ...args }) => <Button {...args} />;
+
+# Button
+
+O componente `Button` é utilizado para permitir que o usuário possa realizar ações dentro da aplicação.
+
+## Import
+
+```sh
+  import { Button } from '@paylivre/components';
+```
+
+## Basic
+
+<Canvas>
+  <Story name="Default">{Template.bind({})}</Story>
+  {/* <Story
+    name="Standard"
+    args={{
+      variant: 'standard',
+    }}
+  >
+    {Template.bind({})}
+  </Story> */}
+</Canvas>
+
+## Variations Theme
+
+O `Button` pode receber a prop `variant`. As variações de tema podem criar botões preenchidos, contornados ou apenas o texto.
+
+<Canvas>
+  <Story name="Thema">
+    <Button m="0.5rem" variant="filled">
+      Filled
+    </Button>
+    <Button m="0.5rem" variant="standard">
+      Standard
+    </Button>
+    <Button m="0.5rem" variant="outline">
+      Outline
+    </Button>
+    <Button m="0.5rem" variant="approve">
+      Approve
+    </Button>
+    <Button m="0.5rem" variant="danger">
+      Cancel
+    </Button>
+  </Story>
+</Canvas>
+
+## Size Variations
+
+O `Button` pode receber a prop `size`. As variações de tamanho podem criar botões pequenos, medios, grandes e tamanho total disponível.
+
+<Canvas>
+  <Story name="Size">
+    <Button m="0.5rem" variant="filled" size="small">
+      Small
+    </Button>
+    <Button m="0.5rem" variant="filled" size="medium">
+      Medium
+    </Button>
+    <Button m="0.5rem" variant="filled" size="large">
+      Large
+    </Button>
+    <Button variant="filled" fullSize>
+      Full Size
+    </Button>
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Button} />

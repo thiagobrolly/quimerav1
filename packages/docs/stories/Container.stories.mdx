@@ -1,0 +1,61 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+
+import { Container } from '@quimera-ui/react';
+
+<Meta
+  title="Layout/Container"
+  component={Container}
+  args={{
+    children: 'Componente Container',
+    w: '',
+    h: '',
+    maxH: '',
+    minH: '',
+    m: '',
+    mt: '',
+    mb: '',
+    ml: '',
+    mr: '',
+    mx: '',
+    my: '',
+    p: '',
+    pt: '',
+    pb: '',
+    pl: '',
+    pr: '',
+    px: '',
+    py: '',
+    gap: '',
+    borderRadius: '',
+    boxShadow: '',
+  }}
+  argTypes={{
+    children: { type: 'string' },
+    bg: { control: 'color' },
+  }}
+  parameters={{}}
+/>
+
+export const Template = ({ ...args }) => <Container {...args} />;
+
+# Container
+
+`Container` centraliza seu conteúdo horizontalmente, vem com display flex por padrão e com várias props de estilo úteis.
+
+## Import
+
+```sh
+  import { Container } from '@paylivre/components';
+```
+
+## Basic
+
+<Canvas>
+  <Story name="Default" args={{}} argTypes={{}} parameters={{}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Container} />

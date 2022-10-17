@@ -1,0 +1,84 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+
+import { Tabs, TabPane } from '@quimera-ui/react';
+
+<Meta
+  title="Components/Tabs"
+  component={Tabs}
+  args={{}}
+  argTypes={{
+    preSelectedTabIndex: {
+      table: {
+        disable: true,
+      },
+      control: false,
+    },
+  }}
+  parameters={{}}
+/>
+
+export const Template = ({ ...args }) => (
+  <Tabs maxW="728px" {...args}>
+    <TabPane title="Basic">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+        ullamcorper bibendum quam accumsan posuere. Aenean pellentesque nunc
+        nunc, suscipit malesuada felis varius nec. Nullam in volutpat diam. Nam
+        sed elementum leo. Nullam pellentesque nulla sed sapien semper, sed
+        porta augue blandit. Curabitur pulvinar arcu eu nulla efficitur, ac
+        varius nunc egestas. Suspendisse enim sem, convallis ac enim sed, auctor
+        semper dolor. Nullam ultrices dolor nec nulla commodo euismod. Nam et
+        sapien at nulla iaculis volutpat. Cras finibus lorem nec ipsum consequat
+        facilisis. Phasellus magna orci, rutrum non enim in, feugiat sodales
+        massa.
+      </p>
+    </TabPane>
+    <TabPane title="Standard">
+      <p>
+        Aliquam vel convallis justo. Donec venenatis ex ac ipsum porta lobortis.
+        Etiam nec purus sit amet nulla iaculis fermentum quis non dolor. Nam
+        eget blandit mi, at suscipit tellus. Praesent nulla felis, tincidunt
+        vitae feugiat vitae, convallis vitae massa. Nulla ut finibus arcu. Sed
+        quis laoreet diam.
+      </p>
+    </TabPane>
+    <TabPane title="Premium">
+      <p>
+        Nullam convallis purus vel vulputate fermentum. Suspendisse ornare purus
+        sed sagittis semper. Aliquam faucibus ligula et pharetra pellentesque.
+        Praesent ultrices iaculis elementum. Mauris malesuada, nunc et pharetra
+        sagittis, nunc nisi ultricies nisi, vitae aliquet turpis erat a tortor.
+        Nunc faucibus, neque et sodales facilisis, odio lacus tempor tortor, at
+        placerat velit ante vel diam. Donec a enim vitae eros cursus maximus.
+      </p>
+    </TabPane>
+  </Tabs>
+);
+
+# Tabs
+
+O componente `Tabs` organiza e permite a navegação entre grupos de conteúdo relacionados e no mesmo nível hierárquico.
+
+## Import
+
+```sh
+  import { Tabs, TabPane } from '@paylivre/components';
+```
+
+## Basic
+
+<Canvas>
+  <Story name="Default" args={{}} argTypes={{}} parameters={{}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Props
+
+### Tabs
+
+<ArgsTable of={Tabs} />
+
+### TabPane
+
+<ArgsTable of={TabPane} />
