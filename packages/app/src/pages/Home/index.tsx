@@ -1,4 +1,4 @@
-import { Button, Heading, Separator } from '@quimera-ui/react';
+import { Button, Heading, Modal, Separator } from '@quimera-ui/react';
 import { useState } from 'react';
 import * as S from './styles';
 
@@ -14,14 +14,14 @@ export function Home() {
       <Button variant="filled" onClick={() => setHandleOpen(true)}>
         Abrir Modal
       </Button>
-      {/* <Modal
+      <Modal
         isOpen={handleOpen}
         viewCloseButton
         onRequestClose={setHandleOpen}
         shouldCloseOnOverlayClick
       >
         Content Modal
-      </Modal> */}
+      </Modal>
     </S.Container>
   );
 }

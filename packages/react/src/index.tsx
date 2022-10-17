@@ -16,3 +16,4 @@ export * from './components/Table';
 export * from './components/Switch';
 export * from './components/Spinner';
 export * from './components/TextField';
+export * from './components/Modal';
